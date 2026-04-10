@@ -1,0 +1,50 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        gold: '#775a19',
+        'gold-light': '#c5a059',
+        'gold-pale': '#e9c176',
+        'gold-cream': '#ffdea5',
+        ink: '#1a1c1b',
+        'ink-soft': '#4e4639',
+        parchment: '#f9f9f7',
+        'parchment-2': '#f4f4f2',
+        'parchment-3': '#eeeeec',
+        'parchment-4': '#e8e8e6',
+        stone: '#7f7667',
+        'stone-light': '#d1c5b4',
+        charcoal: '#2f3130',
+      },
+      fontFamily: {
+        display: ["'Playfair Display'", 'serif'],
+        sans: ["'DM Sans'", 'sans-serif'],
+      },
+      keyframes: {
+        hzoom: { from: { transform: 'scale(1.1)' }, to: { transform: 'scale(1)' } },
+        fup: { from: { opacity: '0', transform: 'translateY(36px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+        fin: { from: { opacity: '0' }, to: { opacity: '1' } },
+        mq: { from: { transform: 'translateX(0)' }, to: { transform: 'translateX(-50%)' } },
+        floatA: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-14px)' } },
+        floatB: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+        shimmer: { '0%': { backgroundPosition: '-400% center' }, '100%': { backgroundPosition: '400% center' } },
+        shimslide: { from: { transform: 'translateX(-100%) skewX(-15deg)' }, to: { transform: 'translateX(400%) skewX(-15deg)' } },
+        spinAnim: { to: { transform: 'rotate(360deg)' } },
+      },
+      animation: {
+        hzoom: 'hzoom 2.8s cubic-bezier(.4,0,.2,1) forwards',
+        fup: 'fup .9s cubic-bezier(.4,0,.2,1) both',
+        fin: 'fin .6s ease both',
+        mq: 'mq 28s linear infinite',
+        floatA: 'floatA 5s ease-in-out infinite',
+        floatB: 'floatB 7s ease-in-out infinite',
+        shimmer: 'shimmer 5s linear infinite',
+        shimslide: 'shimslide 2.5s 1.2s infinite',
+        spin: 'spinAnim 1s linear infinite',
+      },
+    },
+  },
+  plugins: [],
+}
